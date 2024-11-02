@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Skate Spots" class="bg-blue-600 text-white" />
+    
+    <TabView selectedTabTextColor="#2563eb" tabTextColor="#64748b">
+        <TabViewItem title="Spots">
+            <GridLayout>
+                <ListView items="{{ spots }}" itemTap="{{ onSpotTap }}" class="list-group">
+                    <ListView.itemTemplate>
+                        <GridLayout rows="auto" columns="80, *" class="p-4 border-b border-gray-200 bg-white">
+                            <Image src="{{ photoUrl }}" width="70" height="70" row="0" col="0" class="rounded-lg" />
+                            <StackLayout row="0" col="1" class="ml-2">
+                                <Label text="{{ trickName }}" class="text-lg font-bold" />
+                                <Label text="{{ locationName }}" class="text-sm text-gray-500" />
+                                <Label text="{{ coordinates }}" class="text-xs text-gray-400" />
+                            </StackLayout>
+                        </GridLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+                
+                <Button text="+" tap="{{ onAddSpot }}" 
+                    class="bg-blue-600 text-white text-2xl font-bold rounded-full w-16 h-16"
+                    horizontalAlignment="right" verticalAlignment="bottom"
+                    margin="16" />
+            </GridLayout>
+        </TabViewItem>
+        
+        <TabViewItem title="About">
+            <StackLayout class="p-4">
+                <Label text="Skate Spots" class="text-2xl font-bold mb-2" />
+                <Label text="Document and share historical skateboarding locations" class="text-base text-gray-600" textWrap="true" />
+                <Label text="Version 1.0.0" class="text-sm text-gray-500 mt-2" />
+            </StackLayout>
+        </TabViewItem>
+    </TabView>
+</Page>

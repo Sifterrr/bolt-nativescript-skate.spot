@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Page {
+    background-color: #f8fafc;
+}
+
+ActionBar {
+    background-color: #2563eb;
+    color: white;
+}
+
+.list-group {
+    background-color: transparent;
+}
+
+.tab-view {
+    selected-tab-text-color: #2563eb;
+    android-selected-tab-highlight-color: #2563eb;
+}

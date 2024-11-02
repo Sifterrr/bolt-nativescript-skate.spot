@@ -1,0 +1,10 @@
+<GridLayout>
+    <maps:mapView 
+        id="mapView"
+        latitude="{{ latitude }}"
+        longitude="{{ longitude }}"
+        zoom="{{ zoom }}"
+        mapReady="{{ onMapReady }}"
+        markerSelect="{{ onMarkerSelect }}"
+        class="map" />
+</GridLayout>

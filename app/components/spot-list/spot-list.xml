@@ -1,0 +1,14 @@
+<GridLayout>
+    <ListView items="{{ spots }}" itemTap="{{ onSpotTap }}" class="spot-list">
+        <ListView.itemTemplate>
+            <GridLayout rows="auto" columns="80, *" class="p-4 border-b border-gray-200">
+                <Image src="{{ photoUrl }}" width="70" height="70" row="0" col="0" class="rounded-lg" />
+                <StackLayout row="0" col="1" class="ml-2">
+                    <Label text="{{ trickName }}" class="text-lg font-bold" />
+                    <Label text="{{ locationName }}" class="text-sm text-gray-500" />
+                    <Label text="{{ description }}" class="text-sm" textWrap="true" />
+                </StackLayout>
+            </GridLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</GridLayout>
